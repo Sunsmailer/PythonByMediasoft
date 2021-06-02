@@ -25,3 +25,25 @@ elif operation == '**':
     print(f'Вы нашли результ возведения в степень. Результат вычислений: {result}')
 else:
     print('Вы что то ввели неправильно :) Повторите')
+    
+    
+    
+    #2вариант решения
+firstNumber = int(input('Введи первое число '))
+lastNumber = int(input('Введи ещё одно число '))
+operation = (input('Операция над числами '))
+
+d = {
+    '+': firstNumber + lastNumber,
+    '-': firstNumber - lastNumber,
+    '*': firstNumber * lastNumber,
+    '/': firstNumber / lastNumber,
+}
+
+if lastNumber ==0 and operation == '/':
+    print('делить на ноль нельзя')
+
+elif operation in d:
+    print(d[operation])
+else:
+    print('Возможно, вы водили операцию, которая не предусмотрена калькулятором. Список доступных: +, -, *, /.')
